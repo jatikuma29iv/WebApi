@@ -20,4 +20,6 @@ RUN dotnet publish ./src/aspdocker/aspdocker.csproj --output /app/ --configurati
 FROM microsoft/aspnetcore:1.1.2
 WORKDIR /app
 COPY --from=builder /app .
+
+EXPOSE 5000/tcp
 ENTRYPOINT ["dotnet", "aspdocker.dll"]
