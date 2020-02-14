@@ -21,5 +21,5 @@ FROM microsoft/aspnetcore:1.1.2
 WORKDIR /app
 COPY --from=builder /app .
 
-EXPOSE 5000/tcp
+EXPOSE 3000/tcp
 ENTRYPOINT ["dotnet", "aspdocker.dll"]
